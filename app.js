@@ -1,6 +1,19 @@
 // import functions and grab DOM elements
+import { dinosaurs } from './dino-data.js';
+import { favoriteThings } from './favorite-things-data.js';
+import { renderDino, renderListItem } from './utils.js';
 
-// let state
+const dinoContainer = document.getElementById('dinoContainer');
+const favoriteThingsList = document.getElementById('favoriteThings');
+
+for (let dino of dinosaurs) {
+    dinoContainer.append(renderDino(dino));
+}
+
+for (let thing of favoriteThings) {
+    favoriteThingsList.append(renderListItem(thing));
+}
+
 
 // set event listeners 
   // get user input
