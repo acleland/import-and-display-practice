@@ -103,6 +103,11 @@ p {
     flex-wrap: wrap;
 }
 
+#favoriteThings {
+    margin: 2em;
+    font-size: 1.5em;
+}
+
 footer {
     position: fixed;
     width: 100%;
