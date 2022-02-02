@@ -1,6 +1,7 @@
 // IMPORT MODULES under test here:
-import { renderDino, renderListItem, renderFood } from '../utils.js';
+import { renderDino, renderListItem, renderFood, renderCountry } from '../utils.js';
 import { foods } from '../food-data.js';
+import { countries } from '../country-data.js';
 
 const test = QUnit.test;
 
@@ -43,3 +44,12 @@ test('test renderFood', (expect) => {
     expect.equal(actual.outerHTML, expected);
 });
 
+test('test renderCountry', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const expected = `<div class="country"><h5>United States</h5><p>Continent: North America</p><strong>Neighbors:</strong><ul><li>Canada</li><li>Mexico</li></ul></div>`;
+
+    const actual = renderCountry(countries[0]);
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual.outerHTML, expected);
+});

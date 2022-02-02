@@ -64,6 +64,26 @@ export function renderFood(food) {
 }
 
 export function renderCountry(country) {
+    const div = document.createElement('div');
+    div.classList.add('country');
 
+    const h5 = document.createElement('h5');
+    h5.innerText = country.name;
+    div.append(h5);
+
+    const p = document.createElement('p');
+    p.innerText = `Continent: ${country.continent}`;
+    div.append(p);
+
+    const strong = document.createElement('strong');
+    strong.innerText = 'Neighbors:';
+    div.append(strong);
+
+    const ul = document.createElement('ul');
+    for (let neighbor of country.neighbors) {
+        ul.append(renderListItem(neighbor));
+    }
+    div.append(ul);
+    return div;
 }
 
