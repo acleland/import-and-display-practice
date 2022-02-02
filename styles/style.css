@@ -101,6 +101,7 @@ p {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-bottom: 2em;
 }
 
 #favoriteThings {
