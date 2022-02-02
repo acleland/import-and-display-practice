@@ -10,21 +10,21 @@ export function renderDino(dino) {
     
 
     const h5 = document.createElement('h5');
-    h5.innerText = dino.name;
+    h5.textContent = dino.name;
     div.append(h5);
 
     const ul = document.createElement('ul');
     
     let li1 = document.createElement('li');
-    li1.innerText = `Time period: ${dino.period}`;
+    li1.textContent = `Time period: ${dino.period}`;
     ul.append(li1);
 
     let li2 = document.createElement('li');
-    li2.innerText = `Suborder: ${dino.suborder}`;
+    li2.textContent = `Suborder: ${dino.suborder}`;
     ul.append(li2);
 
     let li3 = document.createElement('li');
-    li3.innerText = `Length: ${dino.length} ft`;
+    li3.textContent = `Length: ${dino.length} ft`;
     ul.append(li3);
     
     div.append(ul);
@@ -33,7 +33,7 @@ export function renderDino(dino) {
 
 export function renderListItem(listItem) {
     const li = document.createElement('li');
-    li.innerText = listItem;
+    li.textContent = listItem;
     return li;
 }
 
@@ -41,7 +41,7 @@ export function renderObject(object) {
     const ul = document.createElement('ul');
     for (let key of Object.keys(object)) {
         const li = document.createElement('li');
-        li.innerText = `${key}: ${object[key]}`;
+        li.textContent = `${key}: ${object[key]}`;
         ul.append(li);
     }
     return ul;
@@ -51,11 +51,11 @@ export function renderFood(food) {
     const div = document.createElement('div');
     div.classList.add('food');
     const h5 = document.createElement('h5');
-    h5.innerText = food.name;
+    h5.textContent = food.name;
     div.append(h5);
 
     const p = document.createElement('p');
-    p.innerText = `Serving size: ${food.serving}`;
+    p.textContent = `Serving size: ${food.serving}`;
     div.append(p);
 
     const ul = renderObject(food.nutrition);
@@ -68,15 +68,15 @@ export function renderCountry(country) {
     div.classList.add('country');
 
     const h5 = document.createElement('h5');
-    h5.innerText = country.name;
+    h5.textContent = country.name;
     div.append(h5);
 
     const p = document.createElement('p');
-    p.innerText = `Continent: ${country.continent}`;
+    p.textContent = `Continent: ${country.continent}`;
     div.append(p);
 
     const strong = document.createElement('strong');
-    strong.innerText = 'Neighbors:';
+    strong.textContent = 'Neighbors:';
     div.append(strong);
 
     const ul = document.createElement('ul');
