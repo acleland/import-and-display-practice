@@ -37,6 +37,32 @@ export function renderListItem(listItem) {
     return li;
 }
 
+export function renderObject(object) {
+    const ul = document.createElement('ul');
+    for (let key of Object.keys(object)) {
+        const li = document.createElement('li');
+        li.innerText = `${key}: ${object[key]}`;
+        ul.append(li);
+    }
+    return ul;
+}
+
+export function renderFood(food) {
+    const div = document.createElement('div');
+    div.classList.add('food');
+    const h5 = document.createElement('h5');
+    h5.innerText = food.name;
+    div.append(h5);
+
+    const p = document.createElement('p');
+    p.innerText = `Serving size: ${food.serving}`;
+    div.append(p);
+
+    const ul = renderObject(food.nutrition);
+    div.append(ul);
+    return div;
+}
+
 
 
 

@@ -1,6 +1,7 @@
 // import functions and grab DOM elements
 import { dinosaurs } from './dino-data.js';
 import { favoriteThings } from './favorite-things-data.js';
+import { foods } from './food-data.js';
 import { renderDino, renderListItem } from './utils.js';
 
 const dinoContainer = document.getElementById('dinoContainer');

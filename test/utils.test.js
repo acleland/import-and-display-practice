@@ -1,5 +1,6 @@
 // IMPORT MODULES under test here:
-import { renderDino, renderListItem } from '../utils.js';
+import { renderDino, renderListItem, renderFood } from '../utils.js';
+import { foods } from '../food-data.js';
 
 const test = QUnit.test;
 
@@ -8,7 +9,6 @@ test('test renderDino', (expect) => {
     // Set up your arguments and expectations
     const expected = `<div class="dinosaur"><img src="./assets/dinosaurs/tyrannosaurus.png"><h5>Tyrannosaurus</h5><ul><li>Time period: Cretaceous</li><li>Suborder: Theropoda</li><li>Length: 40 ft</li></ul></div>`;
     
-    //Act 
     // Call the function you're testing and set the result to a const
     const trex = {
         name: 'Tyrannosaurus',
@@ -33,3 +33,13 @@ test('test favorite things', (expect) => {
     // Make assertions about what is expected versus the actual result
     expect.equal(actual.outerHTML, expected);
 });
+
+test('test renderFood', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const expected = `<div class="food"><h5>Yogurt</h5><p>Serving size: 150 g</p><ul><li>calories: 160</li><li>fiber: 0</li><li>protein: 4</li><li>fat: 5</li><li>sugar: 21</li></ul></div>`;
+    const actual = renderFood(foods[0]);
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual.outerHTML, expected);
+});
+
