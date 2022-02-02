@@ -63,6 +63,7 @@ export function renderFood(food) {
     return div;
 }
 
+export function renderCountry(country) {
 
-
+}
 
